@@ -6,13 +6,13 @@ archivesBaseName = 'android-maps-utils'
 group = 'com.google.maps.android'
 
 dependencies {
-    compile 'com.google.android.gms:play-services-maps:11.0.4'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
 }
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 29
 
-    buildToolsVersion '25.0.2'
+    buildToolsVersion '30.0.0 rc2'
 
     resourcePrefix 'amu_'
 
@@ -36,6 +36,10 @@ android {
     adbOptions {
         timeOutInMs 10 * 60 * 1000  // 10 minutes
         installOptions "-d","-t"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 }

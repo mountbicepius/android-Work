@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+@SuppressWarnings("ALL")
 public class MainActivity extends Activity implements View.OnClickListener {
     private ViewGroup mListView;
 
@@ -33,7 +34,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        mListView = (ViewGroup) findViewById(R.id.list);
+        mListView = findViewById(R.id.list);
 
         addDemo("Clustering", ClusteringDemoActivity.class);
         addDemo("Clustering: Custom Look", CustomMarkerClusteringDemoActivity.class);
